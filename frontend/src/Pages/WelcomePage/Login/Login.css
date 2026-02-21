@@ -1,0 +1,163 @@
+body{
+    background-image: linear-gradient(90deg,#e3daec,#ad5aff);
+}
+.mainLogo{
+    width: 5vw;
+}
+.box{
+    background: white;
+    border-radius: 10px;
+    height: 100%;
+    display: flex;
+}
+#animate{
+    background-image: url("../../../images/login2.jpg");
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 3%;
+    position: relative;
+}
+#signIn{
+    border: 2px solid white;
+    background-image: none !important;
+    background-color: transparent;
+    color: white;
+    border-radius: 16px;
+    font-size: 1.3vw;
+    padding: 2% 8%;
+    cursor:pointer;
+
+}
+#create{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.paragraph{
+    color: #979793;
+}
+#create h1,#log h1,#login h1{
+	color:rgba(6,5,11,1);
+}
+.socialMedia{
+    font-size: 1.45vw;
+    padding: 2%;
+    border-radius: 50%;
+}
+.socialMedia:hover{
+    background: rgb(234, 234, 234);
+}
+.socialMediaContainer{
+    display: flex;
+    justify-content: space-evenly;
+    width: 35%;
+}
+#log{
+    display: none;
+    flex-direction: column;
+    padding-top: 5%;
+    align-items: center;
+    width: 50%;
+}
+.materialInput>div>input{
+    padding-left: 5%;
+}
+.materialInput{
+    width: 20vw;
+}
+#create button,#log button,#login button{
+	font-size: 1.3vw;
+    width: 68%;
+    padding: 1%;
+    background: rgba(6,5,11,1);
+    color: white;
+    cursor: pointer;
+    margin-top: 4%;
+
+}
+#create button:hover,#log button:hover,#login button:hover{
+    color: rgba(6,5,11,1);
+    background: white;
+}
+.inputContainer{
+    display: flex;
+    margin: 1%;
+    align-items: center;
+}
+.Loginbox{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+}
+#sideBox{
+    background-image: url('../../../images/login3.jpg');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+#login{
+    display: flex;
+    flex-direction: column;
+    padding-top: 5%;
+    align-items: center;
+    justify-content: center;
+}
+#login>*{
+    margin: 2% 0;
+}
+/* ANIMATIONS */
+@keyframes move{
+	0% {width:50%}
+	25% {width:75%}
+	49% {width:99%}
+	51% {width:99%}
+	75% {width:75%}
+	100% {width:50%}
+}
+@keyframes moveBack{
+	0% {width:50%}
+	25% {width:75%}
+	49% {width:99%}
+	51% {width:99%}
+	75% {width:75%}
+	100% {width:50%}
+}
+
+.OTPContainer{
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.OTPContainer>div>*{
+    margin: 2rem 10px;
+}
+.VtP10Submit{
+    background-color: #2f2f2f !important;
+    color: white !important;
+    font-weight: 600;
+}
+
+.otpBox{
+    justify-content: space-between;
+    align-items: center;
+}
+.otpInput{
+    width: 2.5vw !important;
+    height: 3vw;
+    font-size: 1rem;
+    margin: 0 5px;
+}

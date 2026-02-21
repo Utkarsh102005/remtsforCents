@@ -1,0 +1,74 @@
+.ViewUserTableHead, .ViewUserTableBody{
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 2fr 3fr 2fr 1fr 2fr 2fr 1fr;
+    text-align: center;
+    color: #EAEBEF;
+}
+.ViewUserTableBody{
+    border: 1px solid #EAEBEF;
+    margin: 2% 0;
+    cursor: pointer;
+}
+.ViewUserTableBody>div{
+    padding: 15% 2%;
+}
+.ViewUserTableBody:hover{
+    background-color: #EAEBEF !important;
+    color: black;
+}
+.ADDUserCardImage{
+    margin: 3%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid brown;
+    background: white;
+    border-radius: 10px;
+    padding: 3%;
+}
+.inp{
+    background-color: rgb(240 240 240);
+    border: 2px solid #2f2f2f;
+    min-height: 2vw;
+    height: fit-content;
+    border-radius: 5px;
+    padding: 3%;
+    display: flex;
+    align-items: center;
+}
+.detailPage>div>div{
+    width: 90%;
+}
+.DetailImage{
+    width: 25vw;
+    height: 38vw;
+    margin: auto;
+}
+.ADDUserCardImage>div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 2px solid black;
+    margin: 2%;
+    height: 40vw;
+}
+.verifiedicon{
+    font-size: 1.5vw;
+    color: rgb(14, 233, 14);
+}
+.unverifiedicon{
+    font-size: 1.5vw;
+    color: red;
+}
+.viewUserHead{
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    align-items: center;
+}
+.verifyButton{
+    background: brown !important;
+    color: white !important;
+}

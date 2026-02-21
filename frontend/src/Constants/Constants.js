@@ -1,0 +1,1 @@
+export const RentsForCents = "http://localhost:8000";
