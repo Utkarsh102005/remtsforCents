@@ -1,13 +1,13 @@
 {
   "name": "rentsforcents",
   "version": "1.0.0",
-  "description": "Minor Project for Semester 5",
+  "description": "Minor Project for Semester 6",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon src/app.js"
   },
-  "author": "Harshit Raj",
+  "author": "Utkarsh ISC",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
