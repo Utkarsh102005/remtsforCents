@@ -1,1 +1,1 @@
-export const RentsForCents = "http://localhost:8000";
+export const RentsForCents = "https://rents-backend-wzqu.onrender.com";
