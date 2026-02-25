@@ -3,10 +3,16 @@ const app = express()
 const path=require('path')
 const port = process.env.PORT || 8000;
 const bodyParser = require('body-parser');
+const cors = require("cors"); //added; frontend will now reach backend
 
 const cookieParser = require('cookie-parser')
 // import router from "../router/route.js";
 const router = require("../router/route")
+
+
+app.use(cors({
+    origin: "*"
+}));
 
 
 app.use(bodyParser.json({limit: '50mb'}));
