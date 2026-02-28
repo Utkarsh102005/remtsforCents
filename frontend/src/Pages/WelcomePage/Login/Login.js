@@ -80,7 +80,7 @@ const Login = ({isLog}) => {
             email: sign.email,
             password: sign.password
         }
-        const res = await fetch("/signin",{
+        const res = await fetch(`${RentsForCents}/signin`,{
             method:"POST",
             headers:{
                 "Content-Type":"application/json",
@@ -108,7 +108,7 @@ const Login = ({isLog}) => {
             return;
         }
         const {email,password} = sign
-        const res = await fetch("/managerLogin",{
+        const res = await fetch(`${RentsForCents}/managerLogin`,{
             method:"POST",
             headers:{
                 "Content-Type":"application/json",
@@ -156,7 +156,7 @@ const Login = ({isLog}) => {
                 mobile: mobile,
                 password:password
         }
-        const res = await fetch("/signup/check",{
+        const res = await fetch(`${RentsForCents}/signup/check`,{
             method:"POST",
             headers:{
                 "Content-Type":"application/json",
@@ -216,11 +216,10 @@ const Login = ({isLog}) => {
                 mobile: mobile,
                 password:password
         }
-        const res = await fetch("/signup",{
+        const res = await fetch(`${RentsForCents}/signup`,{
             method:"POST",
             headers:{
-                "Content-Type":"application/json",
-                'Access-Control-Allow-Origin': '*'
+                "Content-Type":"application/json"
             },
             body:JSON.stringify({
                 userDetails
