@@ -45,21 +45,28 @@ const Login = ({isLog}) => {
     }
 
     const changeSignUp = () => {
-        setisopen(!isopen);
-        let logIn=document.getElementById("log");
-        let signUp=document.getElementById("create");
-        let animate=document.getElementById("animate");
+    setisopen(!isopen);
 
-        if(btn==="SIGN IN"){
-            signUp.style.display="none";
-            setTimeout(()=>{logIn.style.display="flex"},700);
-            animate.style.animation="move 0.7s linear";
-        } else {
-            logIn.style.display="none";
-            setTimeout(()=>{signUp.style.display="flex"},700);
-            animate.style.animation="moveBack 0.7s linear";
-        }
+    const logIn = document.getElementById("log");
+    const signUp = document.getElementById("create");
+    const animate = document.getElementById("animate");
+
+    // 🛡️ SAFETY CHECK (IMPORTANT)
+    if (!logIn || !signUp || !animate) {
+        console.warn("DOM elements not ready yet");
+        return;
     }
+
+    if (btn === "SIGN IN") {
+        signUp.style.display = "none";
+        setTimeout(() => { logIn.style.display = "flex" }, 700);
+        animate.style.animation = "move 0.7s linear";
+    } else {
+        logIn.style.display = "none";
+        setTimeout(() => { signUp.style.display = "flex" }, 700);
+        animate.style.animation = "moveBack 0.7s linear";
+    }
+};
 
     // ✅ SIGN IN
     const handleSignIn = async (e)=>{
