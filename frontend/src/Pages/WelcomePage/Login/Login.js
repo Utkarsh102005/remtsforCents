@@ -163,12 +163,13 @@ const Login = ({isLog}) => {
         checkUser();
     }
 
-    // ✅ OTP SUBMIT (DEV + PRODUCTION SAFE)
-const handleOtpSubmit = () => {
+    const handleOtpSubmit = () => {
+
+    const cleanOtp = String(OTP).trim();
 
     // 🟢 DEV MODE (FREE — no Firebase SMS needed)
-    if (OTP === "123456") {
-        console.log("DEV OTP accepted");
+    if (cleanOtp === "123456") {
+        console.log("✅ DEV OTP accepted");
         handleSubmit();
         return;
     }
@@ -180,7 +181,7 @@ const handleOtpSubmit = () => {
     }
 
     window.confirmationResult
-        .confirm(OTP)
+        .confirm(cleanOtp)
         .then(() => {
             handleSubmit();
         })
