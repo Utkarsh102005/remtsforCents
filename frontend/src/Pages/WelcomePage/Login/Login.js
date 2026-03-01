@@ -45,29 +45,31 @@ const Login = ({isLog}) => {
     }
 
     const changeSignUp = () => {
-    setisopen(!isopen);
+    const changeSignUp = () => {
+    setisopen(prev => !prev);
 
     const logIn = document.getElementById("log");
     const signUp = document.getElementById("create");
     const animate = document.getElementById("animate");
 
-    // 🛡️ SAFETY CHECK (IMPORTANT)
     if (!logIn || !signUp || !animate) {
         console.warn("DOM elements not ready yet");
         return;
     }
 
-    if (btn === "SIGN IN") {
+    // 🔥 USE isopen INSTEAD OF btn
+    if (!isopen) {
+        // going to SIGN IN
         signUp.style.display = "none";
         setTimeout(() => { logIn.style.display = "flex" }, 700);
         animate.style.animation = "move 0.7s linear";
     } else {
+        // going to SIGN UP
         logIn.style.display = "none";
         setTimeout(() => { signUp.style.display = "flex" }, 700);
         animate.style.animation = "moveBack 0.7s linear";
     }
 };
-
     // ✅ SIGN IN
     const handleSignIn = async (e)=>{
         e.preventDefault();
