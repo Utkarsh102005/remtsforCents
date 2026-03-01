@@ -45,7 +45,6 @@ const Login = ({isLog}) => {
     }
 
     const changeSignUp = () => {
-    const changeSignUp = () => {
     setisopen(prev => !prev);
 
     const logIn = document.getElementById("log");
@@ -57,7 +56,6 @@ const Login = ({isLog}) => {
         return;
     }
 
-    // 🔥 USE isopen INSTEAD OF btn
     if (!isopen) {
         // going to SIGN IN
         signUp.style.display = "none";
