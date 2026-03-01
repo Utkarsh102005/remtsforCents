@@ -215,39 +215,25 @@ const handleOtpSubmit = () => {
         }
     }
 
-    // ✅ 🔥 FIXED AUTH (MOST IMPORTANT)
-    const handleAuth = () => {
-        try {
-            if (!window.recaptchaVerifier) {
-                window.recaptchaVerifier = new RecaptchaVerifier(
-                    'recaptcha-verifier',
-                    {
-                        size: 'invisible',
-                        callback: () => {
-                            console.log("reCAPTCHA solved");
-                        }
-                    },
-                    authentication
-                );
-            }
+// ✅ DEV MODE AUTH (FREE — no Firebase billing)
+const handleAuth = () => {
+    console.log("DEV MODE: skipping real SMS");
 
-            const phoneNumber = "+91" + sign.mobile;
-            const appVerifier = window.recaptchaVerifier;
-
-            signInWithPhoneNumber(authentication, phoneNumber, appVerifier)
-                .then((confirmationResult) => {
-                    console.log("OTP sent / test mode ready");
-                    window.confirmationResult = confirmationResult;
-                })
-                .catch((error) => {
-                    console.error("SMS error:", error);
-                    alert("SMS not sent");
-                });
-
-        } catch (err) {
-            console.error("Auth setup error:", err);
+    // fake confirmation for testing
+    window.confirmationResult = {
+        confirm: (otp) => {
+            return new Promise((resolve, reject) => {
+                if (otp === "123456") {
+                    resolve({ user: { uid: "test-user" } });
+                } else {
+                    reject(new Error("Invalid OTP"));
+                }
+            });
         }
-    }
+    };
+
+    console.log("Fake OTP session ready");
+};
 
     // ✅ UI (unchanged)
     return (
